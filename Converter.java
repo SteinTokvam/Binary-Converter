@@ -17,12 +17,6 @@ public class Converter{
     System.out.println(value);
   }
 
-  public void test(){
-    for(String bin: alleBin){
-      binToDeci(bin);
-    }
-  }
-
   public void deciToBin(int deci){
     int currDeci=deci;
     String value = "";
@@ -43,8 +37,8 @@ public class Converter{
     char[] turn = value.toCharArray();
     for (int i = 0; i < turn.length / 2; i++) {
       char temp = turn[i];
-    turn[i] = turn[turn.length - 1 - i];
-    turn[turn.length - 1 - i] = temp;
+      turn[i] = turn[turn.length - 1 - i];
+      turn[turn.length - 1 - i] = temp;
   }
   value = "";
   for(int j = 0; j<turn.length;j++){
