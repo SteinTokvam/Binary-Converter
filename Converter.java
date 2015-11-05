@@ -1,8 +1,12 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Converter{
   private ArrayList<String> alleBin = new ArrayList<String>();
-  public void binToDeci(String bin){
+  private Scanner in = new Scanner(System.in);
+  public void binToDeci(){
+    System.out.println("Insert binary number");
+    String bin = in.nextLine();
     char test = '1';
     int value = 0;
     char[] binChar = bin.toCharArray();
@@ -17,8 +21,10 @@ public class Converter{
     System.out.println(value);
   }
 
-  public void deciToBin(int deci){
-    int currDeci=deci;
+  public void deciToBin(){
+    System.out.println("Insert decimal number");
+    String input = in.nextLine();
+    int currDeci=Integer.parseInt(input);
     String value = "";
     if(currDeci==0){
       System.out.println("0");
